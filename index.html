@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>個人行銷／品牌網頁｜開工指令與製作經驗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFBF2; --card:#FFFFFF; --ink:#2B2416; --ink-2:#6B5F49; --line:#F1E4C6;
+  --sun:#FFB81C; --sun-2:#FFD65C; --sun-soft:#FFF3D1; --orange:#F2711C; --sky:#2E8BC0; --leaf:#3E9B5B;
+  --sans:"Noto Sans TC","PingFang TC",sans-serif; --serif:"Noto Serif TC","Songti TC",serif;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 22px/1.8 var(--sans)}
+a{color:var(--sky)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:88px 0 72px;background:
+  radial-gradient(circle at 88% 8%, var(--sun-2) 0 140px, transparent 141px),
+  radial-gradient(circle at 88% 8%, rgba(255,214,92,.35) 0 230px, transparent 231px),
+  linear-gradient(180deg,#FFF6DD,var(--bg))}
+.tag{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--sun);color:#8A5A00;font-weight:700;font-size:20px;padding:6px 16px;border-radius:999px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(44px,6vw,76px);line-height:1.15;margin:24px 0 18px;max-width:14em}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 60%,var(--sun-2) 60%)}
+.hero p{max-width:40em;color:var(--ink-2);margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.steps div{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:22px 24px}
+.steps b{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sun);color:#3a2800;font-size:22px;margin-bottom:8px}
+.steps strong{display:block;font-size:24px}
+.steps span{color:var(--ink-2);font-size:20px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+section{padding:72px 0}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,4vw,48px);line-height:1.25;margin:0 0 12px}
+.lead{color:var(--ink-2);margin:0 0 30px;max-width:44em}
+.kicker{font-weight:700;color:var(--orange);font-size:20px;letter-spacing:.06em}
+
+/* prompt boxes */
+.prompt{background:var(--card);border:2px solid var(--sun);border-radius:var(--r);box-shadow:0 10px 30px rgba(242,113,28,.08);overflow:hidden;margin-bottom:28px}
+.prompt header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--sun-soft);padding:16px 24px;border-bottom:2px solid var(--line)}
+.prompt header strong{font-size:24px}
+.prompt header span{font-size:20px;color:var(--ink-2)}
+.copy{font:700 20px var(--sans);background:var(--orange);color:#fff;border:0;border-radius:12px;padding:12px 22px;cursor:pointer;min-height:52px;white-space:nowrap}
+.copy:hover{background:#d95f0f}
+.copy.done{background:var(--leaf)}
+pre{margin:0;padding:24px 26px;white-space:pre-wrap;word-break:break-word;font:400 21px/1.85 var(--sans);color:var(--ink)}
+pre .fill{background:#FFE9A8;border-radius:6px;padding:0 6px;font-weight:700}
+
+/* lessons */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.card .ic{font-size:34px;line-height:1}
+.card h3{font-size:26px;margin:10px 0 8px;line-height:1.4}
+.card p,.card li{color:var(--ink-2);font-size:21px}
+.card p{margin:0}
+.card ul{margin:8px 0 0;padding-left:1.2em}
+.card.hot{border-color:var(--orange);background:#FFF7EF}
+.card.hot h3::after{content:"這次踩過的坑";margin-left:10px;font-size:20px;font-weight:700;color:#fff;background:var(--orange);padding:2px 10px;border-radius:999px;vertical-align:middle}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+
+/* sections table */
+.secs{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.secs li{counter-increment:s;display:grid;grid-template-columns:64px 220px 1fr;gap:18px;align-items:start;background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:20px 24px}
+.secs li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--sun);font-weight:900;font-size:24px;color:#3a2800}
+.secs b{font-size:24px;padding-top:8px}
+.secs span{color:var(--ink-2);font-size:21px;padding-top:8px}
+@media (max-width:820px){.secs li{grid-template-columns:52px 1fr}.secs span{grid-column:1/-1;padding-top:0}}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;background:#fff;border:2px solid var(--line);border-radius:var(--r)}
+.check li{display:flex;gap:16px;padding:18px 24px;border-bottom:2px dashed var(--line)}
+.check li:last-child{border-bottom:0}
+.check li::before{content:"✓";flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--leaf);color:#fff;font-weight:900;font-size:20px;margin-top:4px}
+
+.note{background:var(--sun-soft);border-left:6px solid var(--sun);border-radius:12px;padding:18px 24px;font-size:21px;color:#5a4300;margin-top:24px}
+
+/* footer */
+footer{background:#2B2416;color:#F6EBD3;padding:48px 0 56px;margin-top:40px}
+footer .links{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;font-size:21px}
+footer a{color:var(--sun-2);font-weight:700;text-decoration:none;border-bottom:2px solid rgba(255,214,92,.4)}
+footer a:hover{border-bottom-color:var(--sun-2)}
+footer small{display:block;text-align:center;margin-top:18px;font-size:20px;color:#BFAF8C}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">☀️ 開工前先看這一頁</span>
+    <h1>個人行銷／品牌網頁<br><em>開工指令與製作經驗</em></h1>
+    <p>整理自「曾志雄博士個人行銷網頁」的完整製作過程。以後要做任何人的個人或品牌網頁，先複製下面的開工指令、填上這次的人物，就不用每次重講一遍。</p>
+    <div class="steps">
+      <div><b>1</b><strong>複製開工指令</strong><span>按下方「複製」按鈕</span></div>
+      <div><b>2</b><strong>填上黃色欄位</strong><span>姓名、頭銜、已知連結、要排除的同名者</span></div>
+      <div><b>3</b><strong>貼給 TAVA</strong><span>其他規格都已寫在指令裡</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="prompt">
+  <div class="wrap">
+    <div class="kicker">STEP 1 · 開工指令</div>
+    <h2>複製這段，填好就能開工</h2>
+    <p class="lead">黃底的部分換成這次的人物資料就好。資料給得越多，搜尋越準，也越不容易抓到同名同姓的人。</p>
+
+    <article class="prompt">
+      <header><div><strong>完整版開工指令</strong><br><span>第一次用、或要交代特別需求時用這版</span></div><button class="copy" type="button" data-target="p1">複製指令</button></header>
+<pre id="p1">我要做<span class="fill">【姓名】</span>的<span class="fill">【個人行銷／品牌】</span>網頁。
+
+【人物基本資料】（用來確認身分，避免找錯人）
+・姓名：<span class="fill">【中文名／英文名】</span>
+・現職與頭銜：<span class="fill">【例如：○○大學助理教授、○○公司董事長】</span>
+・學歷：<span class="fill">【例如：國立成功大學資訊工程博士】</span>
+・已知連結：<span class="fill">【官網、FB、IG、師資頁、報導連結…有幾個貼幾個】</span>
+・要排除的人：<span class="fill">【例如：大陸有同名同姓者，不要收他的資料】</span>
+
+【請上網搜尋這個人的以下資料，網頁要有這些區塊】
+1. 生平學經歷：現職、學歷、經歷、榮譽，分欄清楚呈現
+2. 專長：他最擅長的事，加上代表產品或計畫
+3. 生平事蹟：求學、創業或人生轉折的故事，有好故事就做成時間軸
+4. 媒體牆：把他所有的媒體報導做成媒體牆，可依類別篩選，點卡片看原文
+5. 照片牆：找他活動的照片，數量要多，最好 50 張以上，可分類、可點開放大
+
+【個人連結】
+公司官網、FB、IG、Threads、YouTube、LINE、Email 等，有的話都加上去。
+
+【風格】陽光積極
+【字級】全頁最小的字不能低於 20px，其他依比例調到畫面好看
+
+【網頁底部固定要加】
+1. 本網頁由 TAVA AI 製作（連結：https://www.tava-ai.com/）
+2. 出品人 大樹教練（連結：https://coach1973.github.io/ai-go/）
+3. 友善連結 榮樹下（連結：https://event.bymyway.com/curated/rongtree/）
+
+【交付方式】
+・圖片要直接放進網頁裡，確保發布後的連結一定看得到媒體牆和照片牆
+・完成後打包成 ZIP 讓我下載（含網頁和原始照片）
+・電腦版、手機版都要檢查過
+・查不到或來源互相矛盾的資料，不要自己猜，最後列出來給我確認</pre>
+    </article>
+
+    <article class="prompt">
+      <header><div><strong>精簡版開工指令</strong><br><span>規格不變時用這版，只要給人物資料</span></div><button class="copy" type="button" data-target="p2">複製指令</button></header>
+<pre id="p2">請照「個人行銷／品牌網頁」的固定流程，幫我做<span class="fill">【姓名】</span>的網頁。
+
+・頭銜：<span class="fill">【現職與頭銜】</span>
+・學歷：<span class="fill">【學歷】</span>
+・已知連結：<span class="fill">【官網、FB、IG、報導…】</span>
+・要排除的人：<span class="fill">【同名同姓者，沒有就寫「無」】</span>
+・這次的特別需求：<span class="fill">【沒有就寫「無」；風格想換也寫在這裡】</span></pre>
+    </article>
+    <p class="note">💡 這套流程我也已經存成你帳號裡的固定技能。以後只要說「照個人品牌網頁流程，幫我做 ○○○」，我就會自動套用這頁的所有規格。</p>
+  </div>
+</section>
+
+<section id="sections" style="background:#FFF6DD">
+  <div class="wrap">
+    <div class="kicker">STEP 2 · 網頁架構</div>
+    <h2>每一頁都有這幾個區塊</h2>
+    <p class="lead">依這次曾博士網頁的架構整理。順序固定，內容依人物調整。</p>
+    <ol class="secs">
+      <li><b>開場主視覺</b><span>大名、一句話定位、三個主要頭銜、個人照，以及官網和社群連結按鈕。</span></li>
+      <li><b>重點數字</b><span>三到四個亮眼數字，例如創業年份、學生人數、報導則數。</span></li>
+      <li><b>生平學經歷</b><span>現職、學歷、經歷、榮譽四欄，每項都附年份和一句說明。</span></li>
+      <li><b>專長</b><span>一大四小的卡片排版，最強的專長放最大格，下方列代表產品或計畫。</span></li>
+      <li><b>生平事蹟</b><span>做成時間軸，挑出最打動人的一句話放大當金句，並註明故事出處。</span></li>
+      <li><b>媒體牆</b><span>精選一則放最上面，其餘做成卡片牆：媒體名、日期、標題、類別，可以篩選，點了看原文。</span></li>
+      <li><b>照片牆</b><span>照片依原比例排成瀑布牆，可分類篩選，點開放大，左右鍵切換。</span></li>
+      <li><b>聯絡與連結</b><span>官網、FB、IG、Threads、YouTube、Email 逐行列出，一眼找得到。</span></li>
+      <li><b>固定頁尾</b><span>本網頁由 TAVA AI 製作、出品人 大樹教練、友善連結 榮樹下。</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="kicker">STEP 3 · 製作經驗</div>
+    <h2>這次學到的事</h2>
+    <p class="lead">做曾博士網頁時遇到的狀況和解法。每次製作都照這些原則做，可以少改好幾輪。</p>
+    <div class="grid">
+      <div class="card hot"><div class="ic">🖼️</div><h3>圖片一定要放進網頁裡</h3><p>第一版的媒體牆和照片牆，在發布出去的連結裡看不到。原因是只有網頁本身被帶過去，圖片檔沒有。之後一律把圖片壓縮後直接放進網頁，發布連結和下載包都能完整顯示。</p></div>
+      <div class="card hot"><div class="ic">🔠</div><h3>字級從第一版就做到 20px</h3><p>不要等做完再放大。從一開始就用 20px 當最小字，內文約 22px、標題依比例放大，欄寬一起加寬。交付前用瀏覽器逐段量過電腦版和手機版。</p></div>
+      <div class="card"><div class="ic">🕵️</div><h3>同名同姓要先排除</h3><p>用「學歷、公司、頭銜」三個條件交叉比對，每則報導至少要對上一個才收錄。曾博士有大陸同名者，這次就是靠「成大資工博士」和「傑飛特科技」排除的。</p></div>
+      <div class="card"><div class="ic">📚</div><h3>資料來源有先後順序</h3><ul><li>學校師資頁、官方簡介最可信</li><li>其次是公司官網、新聞報導</li><li>本人社群的自我介紹要標註來源</li></ul></div>
+      <div class="card"><div class="ic">📰</div><h3>媒體牆要做得夠多、夠好找</h3><p>這次收錄 72 則，分成人物報導、企業與 AI 專案、AR・Web3、親筆專欄四類。本人寫的專欄也算，數量會多很多。沒有縮圖的報導，就用媒體名稱做成字卡，版面才不會缺角。</p></div>
+      <div class="card"><div class="ic">📸</div><h3>照片要多管道找</h3><p>FB、IG 的照片大多要登入才看得到，這次的 66 張主要來自新聞稿、公司官網、學校網站和 YouTube 影片畫面。數量不夠時，直接請本人提供原檔最快。</p></div>
+      <div class="card"><div class="ic">❓</div><h3>不確定的資料不要猜</h3><p>例如碩士學校查不到、立瑪的職稱「董事長」和「總經理」說法不一。這類資料照實呈現，最後列成清單請本人確認。</p></div>
+      <div class="card"><div class="ic">📦</div><h3>交付時附下載包</h3><p>ZIP 裡放單一檔案的完整網頁，加上原始照片資料夾。網頁可以直接上傳到任何主機，照片方便之後替換。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="checklist" style="padding-top:24px">
+  <div class="wrap">
+    <div class="kicker">STEP 4 · 交付前檢查</div>
+    <h2>交付前逐項打勾</h2>
+    <ul class="check">
+      <li>全部資料都是本人的，同名同姓的人已經排除</li>
+      <li>生平學經歷、專長、生平事蹟、媒體牆、照片牆五個區塊都有</li>
+      <li>照片 50 張以上；不到 50 張的話，要說明原因並請本人提供</li>
+      <li>官網、FB、IG、Threads、YouTube 等連結都點過，打得開</li>
+      <li>電腦版和手機版逐段量過字級，沒有小於 20px 的字</li>
+      <li>媒體牆和照片牆在發布出去的連結裡看得到圖</li>
+      <li>頁尾有 TAVA AI、大樹教練、榮樹下三個連結</li>
+      <li>ZIP 下載包打得開，裡面有網頁和原始照片</li>
+      <li>列出需要本人確認的資料，並提醒照片使用授權</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav class="links" aria-label="頁尾連結">
+      <span>本網頁由 <a href="https://www.tava-ai.com/" target="_blank" rel="noopener">TAVA AI</a> 製作</span>
+      <span>出品人 <a href="https://coach1973.github.io/ai-go/" target="_blank" rel="noopener">大樹教練</a></span>
+      <span>友善連結 <a href="https://event.bymyway.com/curated/rongtree/" target="_blank" rel="noopener">榮樹下</a></span>
+    </nav>
+    <small>個人行銷／品牌網頁製作指令 · 2026.10</small>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".copy").forEach(btn=>{
+  btn.addEventListener("click",async()=>{
+    const text=document.getElementById(btn.dataset.target).innerText;
+    let ok=false;
+    try{await navigator.clipboard.writeText(text);ok=true}catch(e){
+      const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();
+      try{ok=document.execCommand("copy")}catch(_){}
+      ta.remove();
+    }
+    const old=btn.textContent;btn.textContent=ok?"已複製 ✓":"請手動選取複製";btn.classList.toggle("done",ok);
+    setTimeout(()=>{btn.textContent=old;btn.classList.remove("done")},2200);
+  });
+});
+</script>
+</body>
+</html>
