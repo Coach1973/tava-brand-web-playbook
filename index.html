@@ -154,6 +154,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
 
 【交付方式】
 ・圖片要直接放進網頁裡，確保發布後的連結一定看得到媒體牆和照片牆
+・每張圖放進網頁前先壓縮：長邊 1000px、webp 品質約 72（單張約 100KB 上下，手機和電腦都清楚）；LK888 出的 2～3MB 原圖不要直接放進網頁
 ・完成後打包成 ZIP 讓我下載（含網頁和原始照片）
 ・電腦版、手機版都要檢查過
 ・查不到或來源互相矛盾的資料，不要自己猜，最後列出來給我確認</pre>
@@ -200,7 +201,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
     <h2>這次學到的事</h2>
     <p class="lead">做曾博士網頁時遇到的狀況和解法。每次製作都照這些原則做，可以少改好幾輪。</p>
     <div class="grid">
-      <div class="card hot"><div class="ic">🖼️</div><h3>圖片一定要放進網頁裡</h3><p>第一版的媒體牆和照片牆，在發布出去的連結裡看不到。原因是只有網頁本身被帶過去，圖片檔沒有。之後一律把圖片壓縮後直接放進網頁，發布連結和下載包都能完整顯示。</p></div>
+      <div class="card hot"><div class="ic">🖼️</div><h3>圖片一定要放進網頁裡</h3><p>第一版的媒體牆和照片牆，在發布出去的連結裡看不到。原因是只有網頁本身被帶過去，圖片檔沒有。之後一律把圖片壓縮（長邊 1000px、webp 品質約 72，單張約 100KB 上下；LK888 的 2～3MB 原圖不直接用）後直接放進網頁，發布連結和下載包都能完整顯示。</p></div>
       <div class="card hot"><div class="ic">🏷️</div><h3>出圖位置要寫成 data-slot 編號</h3><p>要等 AI 出圖的位置，一律寫成 &lt;img data-slot="IMG-001" …&gt;，編號跟出圖清單一致。圖出好後，工具照編號直接換進已上架的網頁，不用再下載圖、傳回給 TAVA、重新打包。沒有標編號的位置，工具不會亂換。</p></div>
       <div class="card hot"><div class="ic">⬜</div><h3>不要用「捲動才出現」的效果</h3><p>曾博士 v3 的學經歷、專長、媒體牆出現一大片空白，原因是內容設成捲動到才淡入、圖片捲動到才載入，在你的瀏覽器裡沒有觸發。之後一律讓文字和圖片一打開就全部顯示。</p></div>
       <div class="card hot"><div class="ic">🎨</div><h3>每個區塊都要有圖，不要整段都是字</h3><p>曾博士第一版除了開頭，學經歷、專長、求學過程全是文字，看起來很單調。之後每個區塊都配圖：學經歷放一排重要時刻的照片，專長卡片各配一張代表照片，故事時間軸穿插照片和插畫。</p></div>
@@ -228,6 +229,7 @@ footer small{display:block;text-align:center;margin-top:18px;font-size:20px;colo
       <li>官網、FB、IG、Threads、YouTube、Podcast、部落格等連結都點過，打得開</li>
       <li>電腦版和手機版逐段量過字級，沒有小於 20px 的字</li>
       <li>媒體牆和照片牆在發布出去的連結裡看得到圖</li>
+      <li>每張圖都已壓成長邊 1000px、webp 品質約 72（單張約 100KB 上下），網頁裡沒有 2～3MB 的原圖</li>
       <li>不捲動、直接打開網頁時，每個區塊的文字和圖片都看得到，沒有大片空白</li>
       <li>頁尾有 TAVA AI、大樹教練、榮樹下、顧問師天團・人才軍火庫四個連結</li>
       <li>ZIP 下載包打得開，裡面有網頁和原始照片</li>
